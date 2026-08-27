@@ -6,10 +6,11 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    coverage: {
+      coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      include: ['src/engine/**'],
+      // types.ts contains only type aliases and constants — exclude from coverage
+      include: ['src/engine/gameLogic.ts'],
       thresholds: {
         lines: 100,
         functions: 100,
