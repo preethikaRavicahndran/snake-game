@@ -1,0 +1,49 @@
+/* Google Fonts – Press Start 2P for retro pixel text */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Scrolling on small phones */
+@media (max-height: 600px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
+/* D-pad: hidden on desktop, shown on touch/mobile */
+.dpad {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .dpad {
+    display: flex;
+  }
+}
+
+/* Canvas scales down on very small viewports */
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
